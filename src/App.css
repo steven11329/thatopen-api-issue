@@ -5,25 +5,52 @@ body {
 
 .app-container {
   display: flex;
-  flex-direction: column;
   width: 100dvw;
   height: 100dvh;
 }
 
-.operation-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+.app-main-container {
+  flex: 1;
+  height: 100%;;
+}
+
+nav {
+  padding: 20px;
+}
+
+nav > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav > ul > li {
   padding: 10px;
 }
 
-.three-d-page-container {
-  flex: 1 0 auto;
+nav > ul > li > a {
+  color: #fff;
+  text-decoration: none;
 }
 
-.other-page-container {
-  flex: 1 0 auto;
+nav > ul > li > a:hover {
+  color: #e3e3e3;
+}
+
+.three-d-page-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.canvas-container {
+  flex: 1;
+}
+
+a {
+  color: aqua;
+}
+
+a:visited {
+  color: hotpink;
 }

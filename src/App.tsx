@@ -1,29 +1,22 @@
-import { useState } from "react";
+import { NavLink, Outlet } from "react-router-dom";
 import "./App.css";
-import ThreeD from "./ThreeD";
 
 function App() {
-  const [page, setPage] = useState<"3d" | "other">("3d");
   return (
     <div className="app-container">
-      <div className="operation-container">
-        <button
-          onClick={() => {
-            setPage("3d");
-          }}
-        >
-          3D
-        </button>
-        <button
-          onClick={() => {
-            setPage("other");
-          }}
-        >
-          Other Page
-        </button>
+      <nav>
+        <ul>
+          <li>
+            <NavLink to="issue1">Issue 1</NavLink>
+          </li>
+          <li>
+            <NavLink to="issue2">Issue 2</NavLink>
+          </li>
+        </ul>
+      </nav>
+      <div className="app-main-container">
+        <Outlet />
       </div>
-      {page === "3d" && <ThreeD />}
-      {page === "other" && <div className="other-page-container">Other Page</div>}
     </div>
   );
 }
